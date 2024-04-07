@@ -1,6 +1,6 @@
 import unittest
 
-from mod4.task2.wtforms_validators_adv import app
+from mod_4.task2.wtforms_validators_adv import app
 
 
 class TestWtformsValidatorsAdv(unittest.TestCase):
@@ -61,7 +61,7 @@ class TestWtformsValidatorsAdv(unittest.TestCase):
         response = self.app.post(self.base_url, data=self.data)
         response_text = response.data.decode()
         self.assertEqual(response.status_code, 400)
-        self.assertTrue('email' in response_text)
+        self.assertTrue('name' in response_text)
 
     def test_valid_address(self):
         response = self.app.post(self.base_url, data=self.data)
